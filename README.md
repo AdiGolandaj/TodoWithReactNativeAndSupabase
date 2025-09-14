@@ -185,24 +185,6 @@ To verify that RLS is working correctly:
 - Task state managed locally with real-time sync
 - Consider Redux for more complex state needs
 
-## Future Enhancements
-
-- [ ] Task categories and tags
-- [ ] Due dates and reminders
-- [ ] Task sharing between users
-- [ ] Offline support with sync
-- [ ] Push notifications
-- [ ] Dark mode theme
-- [ ] Task attachments
-- [ ] Search and filtering
-
-## Contributing
-
-1. Follow the existing code structure
-2. Add proper error handling
-3. Include loading states for user operations
-4. Test with multiple user accounts
-5. Update documentation as needed
 
 ## License
 
