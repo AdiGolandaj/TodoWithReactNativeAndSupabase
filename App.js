@@ -9,7 +9,7 @@ import TasksScreen from './src/screens/TasksScreen';
 import AddTaskScreen from './src/screens/AddTaskScreen';
 import EditTaskScreen from './src/screens/EditTaskScreen';
 import DebugScreen from './src/screens/DebugScreen';
-import { ActivityIndicator, View, Text } from 'react-native';
+import { ActivityIndicator, View, Text, StyleSheet } from 'react-native';
 
 const Stack = createNativeStackNavigator();
 
@@ -46,9 +46,9 @@ function AppContent() {
 
   if (loading) {
     return (
-      <View className="flex-1 justify-center items-center bg-gray-900">
+      <View style={styles.loadingContainer}>
         <ActivityIndicator size="large" color="#3B82F6" />
-        <Text className="text-gray-400 mt-4 font-medium">Loading...</Text>
+        <Text style={styles.loadingText}>Loading...</Text>
       </View>
     );
   }
@@ -68,3 +68,17 @@ export default function App() {
     </AuthProvider>
   );
 }
+
+const styles = StyleSheet.create({
+  loadingContainer: {
+    flex: 1,
+    justifyContent: 'center',
+    alignItems: 'center',
+    backgroundColor: '#111827',
+  },
+  loadingText: {
+    color: '#9CA3AF',
+    marginTop: 16,
+    fontWeight: '500',
+  },
+});
